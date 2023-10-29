@@ -32,7 +32,7 @@ char* read_from_file(char *filename, size_t* size) {
 void write_to_file(char* filename, char* data, size_t size) {
 	struct file fs;
 
-	if(ak_file_create_to_write(&fs, "result.txt") != ak_error_ok) {
+	if(ak_file_create_to_write(&fs, filename) != ak_error_ok) {
     	}
 
     	if(ak_file_write(&fs, data, size) != size) {
